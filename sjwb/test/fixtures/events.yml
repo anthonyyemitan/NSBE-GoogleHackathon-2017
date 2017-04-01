@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ename: MyString
+  etime: 2017-04-01 00:28:13
+  longitude: 1.5
+  latitude: 1.5
+  locname: MyString
+  description: MyText
+
+two:
+  ename: MyString
+  etime: 2017-04-01 00:28:13
+  longitude: 1.5
+  latitude: 1.5
+  locname: MyString
+  description: MyText
