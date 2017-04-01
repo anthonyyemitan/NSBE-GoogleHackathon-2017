@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def new
-    
+    render 'events/create'
   end
 
   def create
@@ -11,6 +11,7 @@ class EventsController < ApplicationController
       redirect_to @event
     else
       render 'errors\save_error'
+    end
   end
 
   def list
