@@ -17,22 +17,22 @@
 
    <body>
 
-<ul>
-  <li><a href="home.html">HOME</a></li>
-  <li><a href="hack.html">POST</a></li>
-  <li><a href="see.html">EVENTS</a></li>
-  <li><a href="about.asp">PHOTOS/VIDEOS</a></li>
-</ul>
+	<ul>
+		<li><a href="home.html">HOME</a></li>
+		<li><a href="hack.html">POST</a></li>
+		<li><a href="see.html">EVENTS</a></li>
+		<li><a href="about.asp">PHOTOS/VIDEOS</a></li>
+	</ul>
         <H2>"BE THE CHANGE YOU WISH TO SEE IN THE WORLD." - MAHATMA GANDHI</H2>
        <H1>POST </H1>
        
-       
+       <%= form_tag("events/create", method:"post") do %>
        <div class = "container">
        <div class = "form-horizontal">
          <div class = "form-group">
            <label for = "ename" class = "col-sm-0">EVENT NAME</label>
            <div class = "col-sm-0">
-             <input type = "text" class = "form-control" id = "ename" placeholder="Event Name">
+			<%= text_field(:ename) %>
            </div>
          </div>
            
@@ -40,7 +40,7 @@
            <div class = "form-group">
              <label for ="date1" class = "col-sm-0">DATE</label>
              <div class="col-sm-0">
-               <input type="date" class="form-control" id="date1" placeholder="Event Date">
+               <%= text_field(:date1) %>
                </div>
            </div>
              
@@ -48,15 +48,15 @@
            <div class = "form-group">
              <label for="time1" class="col-sm-0">TIME</label>
              <div class = "col-sm-0">
-               <input type="time" class="form-control" id="time1" placeholder="Event Time">
+              <%= text_field(:time1) %>
              </div>
                
             <div class = "container">
             <div class = "form-horizontal">
-            <div class = "form-group">
-            <label for = "ename" class = "col-sm-0">EVENT DESCRIPTION</label>
-            <div class = "col-sm-0">
-            <textarea type = "text" class="form-control" id="edes"placeholder="Type Here"></textarea>
+				<div class = "form-group">
+				<label for = "ename" class = "col-sm-0">EVENT DESCRIPTION</label>
+					<div class = "col-sm-0">
+					<%= text_field(:edes) %>
             </div>
             </div>
             
@@ -65,14 +65,10 @@
          </div>
        </div>
      </div>
-        <div id="nav">
-            <h3></h3>
-          
+        <div id="nav">     
         </div>
-           
- <form method="get" action="/page2">
-  <button type="submit">SUBMIT YOUR EVENT</button>
-</form>
-           
+
+	</button type <%= submit_tag("Submit") %> </button>
+  <% end %>         
    </body>
  </html>
